@@ -15,18 +15,7 @@ const solatSteps = [
     transliteration: 'Allahu Akbar',
     meaning: 'Allah is the Greatest',
     description: 'Stand facing the Qiblah. Raise both hands to shoulder or ear level with palms facing forward, and say the takbir.',
-    posture: (
-      <svg className="w-full h-56" viewBox="0 0 300 240" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <circle cx="150" cy="50" r="25" fill="#6B8E7F" opacity="0.3"/>
-        <rect x="135" y="80" width="30" height="60" rx="4" fill="#6B8E7F" opacity="0.4"/>
-        <path d="M165 85 L195 70" stroke="#C9B8A3" strokeWidth="6" strokeLinecap="round"/>
-        <path d="M135 85 L105 70" stroke="#C9B8A3" strokeWidth="6" strokeLinecap="round"/>
-        <circle cx="105" cy="70" r="10" fill="#C9B8A3" opacity="0.5"/>
-        <circle cx="195" cy="70" r="10" fill="#C9B8A3" opacity="0.5"/>
-        <rect x="140" y="140" width="20" height="70" rx="4" fill="#6B8E7F" opacity="0.4"/>
-        <ellipse cx="150" cy="215" rx="20" ry="8" fill="#8BA89B" opacity="0.3"/>
-      </svg>
-    ),
+    posture: <img src="src/images/1.png"/>,
   },
   {
     step: 2,
@@ -36,17 +25,7 @@ const solatSteps = [
     transliteration: 'Bismillahir Rahmanir Rahim',
     meaning: 'In the name of Allah, the Most Gracious, the Most Merciful',
     description: 'Place your right hand over your left on your chest. Recite Surah Al-Fatihah in a clear, moderate voice.',
-    posture: (
-      <svg className="w-full h-56" viewBox="0 0 300 240" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <circle cx="150" cy="50" r="25" fill="#6B8E7F" opacity="0.3"/>
-        <rect x="135" y="80" width="30" height="60" rx="4" fill="#6B8E7F" opacity="0.4"/>
-        <path d="M165 100 L180 110 L165 120" stroke="#C9B8A3" strokeWidth="5" strokeLinecap="round" fill="none"/>
-        <path d="M135 100 L145 110" stroke="#C9B8A3" strokeWidth="5" strokeLinecap="round"/>
-        <ellipse cx="150" cy="105" rx="20" ry="15" fill="#E8D9C5" opacity="0.4"/>
-        <rect x="140" y="140" width="20" height="70" rx="4" fill="#6B8E7F" opacity="0.4"/>
-        <ellipse cx="150" cy="215" rx="20" ry="8" fill="#8BA89B" opacity="0.3"/>
-      </svg>
-    ),
+    posture: <img src="src/images/2.png"/>,
   },
   {
     step: 3,
@@ -56,19 +35,7 @@ const solatSteps = [
     transliteration: 'Subhana Rabbiyal Adheem',
     meaning: 'Glory be to my Lord, the Most Great',
     description: 'Bow down with your back straight and parallel to the ground. Place hands on knees. Say the tasbih at least three times.',
-    posture: (
-      <svg className="w-full h-56" viewBox="0 0 300 240" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <circle cx="150" cy="80" r="20" fill="#6B8E7F" opacity="0.3"/>
-        <rect x="135" y="100" width="30" height="50" rx="4" fill="#6B8E7F" opacity="0.4"/>
-        <path d="M165 110 L200 130" stroke="#C9B8A3" strokeWidth="6" strokeLinecap="round"/>
-        <path d="M135 110 L100 130" stroke="#C9B8A3" strokeWidth="6" strokeLinecap="round"/>
-        <circle cx="100" cy="130" r="8" fill="#C9B8A3" opacity="0.5"/>
-        <circle cx="200" cy="130" r="8" fill="#C9B8A3" opacity="0.5"/>
-        <rect x="135" y="150" width="30" height="40" rx="4" fill="#6B8E7F" opacity="0.4"/>
-        <ellipse cx="120" cy="195" rx="15" ry="8" fill="#8BA89B" opacity="0.3"/>
-        <ellipse cx="180" cy="195" rx="15" ry="8" fill="#8BA89B" opacity="0.3"/>
-      </svg>
-    ),
+    posture: <img src="src/images/3.png"/>,
   },
   {
     step: 4,
@@ -78,16 +45,7 @@ const solatSteps = [
     transliteration: "Sami'Allahu liman hamidah",
     meaning: 'Allah hears those who praise Him',
     description: 'Rise back to standing position with hands at sides. Recite the tasbih with focus and gratitude.',
-    posture: (
-      <svg className="w-full h-56" viewBox="0 0 300 240" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <circle cx="150" cy="50" r="25" fill="#6B8E7F" opacity="0.3"/>
-        <rect x="135" y="80" width="30" height="60" rx="4" fill="#6B8E7F" opacity="0.4"/>
-        <path d="M165 100 L180 120" stroke="#C9B8A3" strokeWidth="6" strokeLinecap="round"/>
-        <path d="M135 100 L120 120" stroke="#C9B8A3" strokeWidth="6" strokeLinecap="round"/>
-        <rect x="140" y="140" width="20" height="70" rx="4" fill="#6B8E7F" opacity="0.4"/>
-        <ellipse cx="150" cy="215" rx="20" ry="8" fill="#8BA89B" opacity="0.3"/>
-      </svg>
-    ),
+    posture: <img src="src/images/3.png"/>,
   },
   {
     step: 5,
@@ -97,18 +55,7 @@ const solatSteps = [
     transliteration: "Subhana Rabbiyal A'la",
     meaning: 'Glory be to my Lord, the Most High',
     description: 'Prostrate with forehead, nose, both palms, both knees, and toes touching the ground. Say the tasbih at least three times.',
-    posture: (
-      <svg className="w-full h-56" viewBox="0 0 300 240" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <circle cx="120" cy="140" r="18" fill="#6B8E7F" opacity="0.3"/>
-        <rect x="110" y="160" width="20" height="30" rx="3" fill="#6B8E7F" opacity="0.4"/>
-        <path d="M95 165 L70 175" stroke="#C9B8A3" strokeWidth="5" strokeLinecap="round"/>
-        <path d="M125 165 L150 175" stroke="#C9B8A3" strokeWidth="5" strokeLinecap="round"/>
-        <circle cx="70" cy="175" r="8" fill="#C9B8A3" opacity="0.5"/>
-        <circle cx="150" cy="175" r="8" fill="#C9B8A3" opacity="0.5"/>
-        <ellipse cx="85" cy="195" rx="12" ry="8" fill="#8BA89B" opacity="0.4"/>
-        <ellipse cx="135" cy="195" rx="12" ry="8" fill="#8BA89B" opacity="0.4"/>
-      </svg>
-    ),
+    posture: <img src="src/images/5.png"/>,
   },
   {
     step: 6,
@@ -118,16 +65,7 @@ const solatSteps = [
     transliteration: 'Rabbighfirli',
     meaning: 'My Lord, forgive me',
     description: 'Sit briefly between the two prostrations. Keep your hands on your thighs and recite the dua.',
-    posture: (
-      <svg className="w-full h-56" viewBox="0 0 300 240" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <circle cx="150" cy="100" r="20" fill="#6B8E7F" opacity="0.3"/>
-        <rect x="135" y="125" width="30" height="35" rx="4" fill="#6B8E7F" opacity="0.4"/>
-        <path d="M165 135 L185 145" stroke="#C9B8A3" strokeWidth="5" strokeLinecap="round"/>
-        <path d="M135 135 L115 145" stroke="#C9B8A3" strokeWidth="5" strokeLinecap="round"/>
-        <rect x="130" y="160" width="40" height="20" rx="3" fill="#8BA89B" opacity="0.3"/>
-        <ellipse cx="140" cy="185" rx="15" ry="8" fill="#8BA89B" opacity="0.4"/>
-      </svg>
-    ),
+    posture: <img src="src/images/6.png"/>,
   },
   {
     step: 7,
@@ -137,17 +75,7 @@ const solatSteps = [
     transliteration: 'Ash-hadu an la ilaha illallah',
     meaning: 'I bear witness that there is no deity except Allah',
     description: 'Sit in the final sitting position. Raise your index finger when mentioning Allah and recite the full Tashahhud.',
-    posture: (
-      <svg className="w-full h-56" viewBox="0 0 300 240" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <circle cx="150" cy="100" r="22" fill="#6B8E7F" opacity="0.3"/>
-        <rect x="135" y="125" width="30" height="40" rx="4" fill="#6B8E7F" opacity="0.4"/>
-        <path d="M165 140 L190 150" stroke="#C9B8A3" strokeWidth="5" strokeLinecap="round"/>
-        <path d="M190 150 L192 135" stroke="#C9B8A3" strokeWidth="3" strokeLinecap="round"/>
-        <path d="M135 145 L115 155" stroke="#C9B8A3" strokeWidth="5" strokeLinecap="round"/>
-        <rect x="125" y="165" width="50" height="18" rx="3" fill="#8BA89B" opacity="0.3"/>
-        <ellipse cx="145" cy="190" rx="18" ry="8" fill="#8BA89B" opacity="0.4"/>
-      </svg>
-    ),
+    posture: <img src="src/images/7.png"/> // try to add image 8 too?
   },
   {
     step: 8,
@@ -157,17 +85,7 @@ const solatSteps = [
     transliteration: 'Assalamu alaikum wa rahmatullah',
     meaning: 'Peace and mercy of Allah be upon you',
     description: 'Turn your head to the right and say the salam, then turn to the left and repeat. This completes your prayer.',
-    posture: (
-      <svg className="w-full h-56" viewBox="0 0 300 240" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <circle cx="150" cy="100" r="22" fill="#6B8E7F" opacity="0.3"/>
-        <path d="M165 100 L180 95" stroke="#6B8E7F" strokeWidth="2" strokeLinecap="round" opacity="0.6"/>
-        <rect x="135" y="125" width="30" height="40" rx="4" fill="#6B8E7F" opacity="0.4"/>
-        <path d="M165 145 L185 155" stroke="#C9B8A3" strokeWidth="5" strokeLinecap="round"/>
-        <path d="M135 145 L115 155" stroke="#C9B8A3" strokeWidth="5" strokeLinecap="round"/>
-        <rect x="125" y="165" width="50" height="18" rx="3" fill="#8BA89B" opacity="0.3"/>
-        <ellipse cx="145" cy="190" rx="18" ry="8" fill="#8BA89B" opacity="0.4"/>
-      </svg>
-    ),
+    posture: <img src="src/images/9.png"/>, 
   },
 ];
 
