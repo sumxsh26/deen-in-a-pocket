@@ -51,7 +51,7 @@
     },
     build: {
       target: 'esnext',
-      outDir: 'build',
+      outDir: 'dist', // changed from 'build' to 'dist' bcs vercel wants it as a dist :/
     },
     server: {
       port: 3000,
