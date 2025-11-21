@@ -18,7 +18,7 @@ const solatSteps = [
     meaning: 'Allah is the Greatest',
     description: 'Stand facing the Qiblah. Raise both hands to shoulder or ear level with palms facing forward, and say the takbir.',
     posture: <img src="src/images/1.png"/>,
-    audio: "/src/images/audio1.mp3"
+    audio: "/src/images/Audio01.mp3"
   },
   {
     step: 2,
@@ -126,12 +126,12 @@ export function SolatGuide({ onBack }: SolatGuideProps) {
 
   const audioRef = useRef<HTMLAudioElement>(null);
 
- const handleAudio = () => {
-  if (audioRef.current) {
-    audioRef.current.currentTime = 0; // restart if clicked again
-    audioRef.current.play();
-  }
-};
+  const handleAudio = () => {
+    if (audioRef.current) {
+      audioRef.current.currentTime = 0; // restart if clicked again
+      audioRef.current.play();
+    }
+  };
 
   return (
     <div className="min-h-screen bg-white flex flex-col">
@@ -208,6 +208,7 @@ export function SolatGuide({ onBack }: SolatGuideProps) {
           </div>
 
           {/* Audio Button */}
+          <audio ref={audioRef} src={step.audio} />
           <button 
           onClick={handleAudio}
           className="w-full h-14 rounded-3xl bg-accent/20 border border-accent/30 flex items-center justify-center gap-3 hover:bg-accent/30 transition-colors">
