@@ -4,6 +4,7 @@ import { HomeDashboard } from './components/HomeDashboard';
 import { WudhuGuide } from './components/WudhuGuide';
 import { SolatGuide } from './components/SolatGuide';
 import { Settings } from './components/Settings';
+import { Analytics } from "@vercel/analytics/next"
 
 export type Screen = 'onboarding' | 'home' | 'wudhu' | 'solat' | 'settings';
 
@@ -21,13 +22,14 @@ export default function App() {
   };
 
   return (
-    <div className="min-h-screen bg-[#F5F3EE]">
+      <div className="min-h-screen bg-[#F5F3EE]">
       <div className="max-w-md mx-auto min-h-screen bg-white shadow-xl">
         {currentScreen === 'onboarding' && (
           <OnboardingScreen onComplete={handleCompleteOnboarding} />
         )}
         {currentScreen === 'home' && (
           <HomeDashboard onNavigate={navigateTo} />
+          
         )}
         {currentScreen === 'wudhu' && (
           <WudhuGuide onBack={() => navigateTo('home')} />
@@ -38,6 +40,7 @@ export default function App() {
         {currentScreen === 'settings' && (
           <Settings onBack={() => navigateTo('home')} />
         )}
+        <Analytics />
       </div>
     </div>
   );
