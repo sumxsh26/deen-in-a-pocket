@@ -4,6 +4,8 @@ import { HomeDashboard } from './components/HomeDashboard';
 import { WudhuGuide } from './components/WudhuGuide';
 import { SolatGuide } from './components/SolatGuide';
 import { Settings } from './components/Settings';
+import { Analytics } from '@vercel/analytics/react';
+
 
 export type Screen = 'onboarding' | 'home' | 'wudhu' | 'solat' | 'settings';
 
@@ -28,7 +30,6 @@ export default function App() {
         )}
         {currentScreen === 'home' && (
           <HomeDashboard onNavigate={navigateTo} />
-          
         )}
         {currentScreen === 'wudhu' && (
           <WudhuGuide onBack={() => navigateTo('home')} />
@@ -39,6 +40,8 @@ export default function App() {
         {currentScreen === 'settings' && (
           <Settings onBack={() => navigateTo('home')} />
         )}
+        <Analytics />
+
       </div>
     </div>
   );
