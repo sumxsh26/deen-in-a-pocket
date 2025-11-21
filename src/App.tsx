@@ -4,7 +4,6 @@ import { HomeDashboard } from './components/HomeDashboard';
 import { WudhuGuide } from './components/WudhuGuide';
 import { SolatGuide } from './components/SolatGuide';
 import { Settings } from './components/Settings';
-import { Analytics } from "@vercel/analytics/next"
 
 export type Screen = 'onboarding' | 'home' | 'wudhu' | 'solat' | 'settings';
 
@@ -40,7 +39,6 @@ export default function App() {
         {currentScreen === 'settings' && (
           <Settings onBack={() => navigateTo('home')} />
         )}
-        <Analytics />
       </div>
     </div>
   );
