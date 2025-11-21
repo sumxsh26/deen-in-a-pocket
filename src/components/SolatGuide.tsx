@@ -28,7 +28,7 @@ const solatSteps = [
     transliteration: 'Bismillahir Rahmanir Rahim',
     meaning: 'In the name of Allah, the Most Gracious, the Most Merciful. All praise is for Allah—Lord of all worlds, the Most Compassionate, Most Merciful, Master of the Day of Judgment. You ˹alone˺ we worship and You ˹alone˺ we ask for help. Guide us along the Straight Path, the Path of those You have blessed—not those You are displeased with, or those who are astray.',
     description: 'Place your right hand over your left on your chest. Recite Surah Al-Fatihah in a clear, moderate voice.',
-    posture: <img src="src/public/images/2.png"/>,
+    posture: <img src="/images/2.png"/>,
   },
   {
     step: 3,
@@ -38,7 +38,7 @@ const solatSteps = [
     transliteration: 'Subhana Rabbiyal Adheem',
     meaning: 'Glory be to my Lord, the Most Great',
     description: 'Bow down with your back straight and parallel to the ground. Place hands on knees. Say the tasbih at least three times.',
-    posture: <img src="src/public/images/4.png"/>,
+    posture: <img src="/images/4.png"/>,
   },
   {
     step: 4,
@@ -48,7 +48,7 @@ const solatSteps = [
     transliteration: "Sami'Allahu liman hamidah",
     meaning: 'Allah hears those who praise Him',
     description: 'Rise back to standing position with hands at sides. Recite the tasbih with focus and gratitude.',
-    posture: <img src="src/public/images/3.png"/>,
+    posture: <img src="/images/3.png"/>,
   },
   {
     step: 5,
@@ -58,7 +58,7 @@ const solatSteps = [
     transliteration: "Subhana Rabbiyal A'la",
     meaning: 'Glory be to my Lord, the Most High',
     description: 'Prostrate with forehead, nose, both palms, both knees, and toes touching the ground. Say the tasbih at least three times.',
-    posture: <img src="src/public/images/5.png"/>,
+    posture: <img src="/images/5.png"/>,
   },
   {
     step: 6,
@@ -68,7 +68,7 @@ const solatSteps = [
     transliteration: 'Rabbighfirli',
     meaning: 'My Lord, forgive me',
     description: 'Sit briefly between the two prostrations. Keep your hands on your thighs and recite the dua.',
-    posture: <img src="src/public/images/6.png"/>,
+    posture: <img src="/images/6.png"/>,
   },
   {
     step: 7,
@@ -78,7 +78,7 @@ const solatSteps = [
     transliteration: 'Ash-hadu an la ilaha illallah',
     meaning: 'I bear witness that there is no deity except Allah',
     description: 'Sit in the final sitting position. Raise your index finger when mentioning Allah and recite the full Tashahhud.',
-    posture: <img src="src/public/images/7.png"/> // try to add image 8 too?
+    posture: <img src="/images/7.png"/> // try to add image 8 too?
   },
   {
     step: 8,
@@ -88,7 +88,7 @@ const solatSteps = [
     transliteration: 'Assalamu alaikum wa rahmatullah',
     meaning: 'Peace and mercy of Allah be upon you',
     description: 'Turn your head to the right and say the salam, then turn to the left and repeat. This completes your prayer.',
-    posture: <img src="src/public/images/9.png"/>, 
+    posture: <img src="/images/9.png"/>, 
   },
 ];
 
