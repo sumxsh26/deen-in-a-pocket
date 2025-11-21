@@ -17,8 +17,8 @@ const solatSteps = [
     transliteration: 'Allahu Akbar',
     meaning: 'Allah is the Greatest',
     description: 'Stand facing the Qiblah. Raise both hands to shoulder or ear level with palms facing forward, and say the takbir.',
-    posture: <img src="src/public/images/1.png"/>,
-    audio: "src/public/audio/Audio1.mp3"
+    posture: <img src="/public/images/1.png"/>,
+    audio: "/public/audio/Audio1.mp3"
   },
   {
     step: 2,
