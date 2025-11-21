@@ -1,6 +1,8 @@
 import { useState } from 'react';
 import { ChevronLeft, ChevronRight, Volume2, Check } from 'lucide-react';
 import { Button } from './ui/button';
+import { useRef } from "react";
+
 
 interface SolatGuideProps {
   onBack: () => void;
@@ -16,6 +18,7 @@ const solatSteps = [
     meaning: 'Allah is the Greatest',
     description: 'Stand facing the Qiblah. Raise both hands to shoulder or ear level with palms facing forward, and say the takbir.',
     posture: <img src="src/images/1.png"/>,
+    audio: "/src/images/audio1.mp3"
   },
   {
     step: 2,
@@ -35,7 +38,7 @@ const solatSteps = [
     transliteration: 'Subhana Rabbiyal Adheem',
     meaning: 'Glory be to my Lord, the Most Great',
     description: 'Bow down with your back straight and parallel to the ground. Place hands on knees. Say the tasbih at least three times.',
-    posture: <img src="src/images/3.png"/>,
+    posture: <img src="src/images/4.png"/>,
   },
   {
     step: 4,
@@ -121,6 +124,15 @@ export function SolatGuide({ onBack }: SolatGuideProps) {
     }
   };
 
+  const audioRef = useRef<HTMLAudioElement>(null);
+
+ const handleAudio = () => {
+  if (audioRef.current) {
+    audioRef.current.currentTime = 0; // restart if clicked again
+    audioRef.current.play();
+  }
+};
+
   return (
     <div className="min-h-screen bg-white flex flex-col">
       {/* Header */}
@@ -196,7 +208,9 @@ export function SolatGuide({ onBack }: SolatGuideProps) {
           </div>
 
           {/* Audio Button */}
-          <button className="w-full h-14 rounded-3xl bg-accent/20 border border-accent/30 flex items-center justify-center gap-3 hover:bg-accent/30 transition-colors">
+          <button 
+          onClick={handleAudio}
+          className="w-full h-14 rounded-3xl bg-accent/20 border border-accent/30 flex items-center justify-center gap-3 hover:bg-accent/30 transition-colors">
             <Volume2 className="w-5 h-5 text-accent-foreground" />
             <span className="text-accent-foreground text-[16px]">Listen to Recitation</span>
           </button>
