@@ -39,7 +39,7 @@ export default function App() {
           <SolatGuide onBack={() => navigateTo('home')} />
         )}
         {currentScreen === 'dua' && (
-          <DuaLibrary onBack={() => navigateTo('dua')} />
+          <DuaLibrary onBack={() => navigateTo('home')} />
         )}
         {currentScreen === 'settings' && (
           <Settings onBack={() => navigateTo('home')} />
