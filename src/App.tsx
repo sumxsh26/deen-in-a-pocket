@@ -4,10 +4,11 @@ import { HomeDashboard } from './components/HomeDashboard';
 import { WudhuGuide } from './components/WudhuGuide';
 import { SolatGuide } from './components/SolatGuide';
 import { Settings } from './components/Settings';
+import { DuaLibrary } from './components/DuaLibrary';
 import { Analytics } from '@vercel/analytics/react';
 
 
-export type Screen = 'onboarding' | 'home' | 'wudhu' | 'solat' | 'settings';
+export type Screen = 'onboarding' | 'home' | 'wudhu' | 'solat' | 'settings' | 'dua';
 
 export default function App() {
   const [currentScreen, setCurrentScreen] = useState<Screen>('onboarding');
@@ -36,6 +37,9 @@ export default function App() {
         )}
         {currentScreen === 'solat' && (
           <SolatGuide onBack={() => navigateTo('home')} />
+        )}
+        {currentScreen === 'dua' && (
+          <DuaLibrary onBack={() => navigateTo('dua')} />
         )}
         {currentScreen === 'settings' && (
           <Settings onBack={() => navigateTo('home')} />

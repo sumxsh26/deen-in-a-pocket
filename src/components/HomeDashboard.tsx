@@ -159,7 +159,9 @@ export function HomeDashboard({
             </button>
 
             {/* Du'a Library */}
-            <button className="bg-white border border-border rounded-3xl p-6 flex flex-col items-start gap-3 hover:shadow-lg hover:border-primary/20 transition-all active:scale-95">
+            <button 
+            onClick={() => onNavigate("dua")}
+            className="bg-white border border-border rounded-3xl p-6 flex flex-col items-start gap-3 hover:shadow-lg hover:border-primary/20 transition-all active:scale-95">
               <div className="w-14 h-14 rounded-2xl bg-[#E8D9C5]/50 flex items-center justify-center">
                 <Book className="w-7 h-7 text-[#A68968]" />
               </div>
