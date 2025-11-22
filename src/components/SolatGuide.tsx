@@ -3,10 +3,12 @@ import { ChevronLeft, ChevronRight, Volume2, Check } from 'lucide-react';
 import { Button } from './ui/button';
 import { useRef } from "react";
 
-
 interface SolatGuideProps {
   onBack: () => void;
 }
+
+const prayerTypes = ['Fajr', 'Zuhr', 'Asr', 'Maghrib', 'Isha'] as const;
+type PrayerType = typeof prayerTypes[number];
 
 const solatSteps = [
   {
@@ -29,6 +31,7 @@ const solatSteps = [
     meaning: 'In the name of Allah, the Most Gracious, the Most Merciful. All praise is for Allah—Lord of all worlds, the Most Compassionate, Most Merciful, Master of the Day of Judgment. You ˹alone˺ we worship and You ˹alone˺ we ask for help. Guide us along the Straight Path, the Path of those You have blessed—not those You are displeased with, or those who are astray.',
     description: 'Place your right hand over your left on your chest. Recite Surah Al-Fatihah in a clear, moderate voice.',
     posture: <img src="/images/2.png"/>,
+    audio: "/audio/Audio1.mp3"
   },
   {
     step: 3,
@@ -39,6 +42,7 @@ const solatSteps = [
     meaning: 'Glory be to my Lord, the Most Great',
     description: 'Bow down with your back straight and parallel to the ground. Place hands on knees. Say the tasbih at least three times.',
     posture: <img src="/images/4.png"/>,
+    audio: "/audio/Audio1.mp3"
   },
   {
     step: 4,
@@ -49,6 +53,7 @@ const solatSteps = [
     meaning: 'Allah hears those who praise Him',
     description: 'Rise back to standing position with hands at sides. Recite the tasbih with focus and gratitude.',
     posture: <img src="/images/3.png"/>,
+    audio: "/audio/Audio1.mp3"
   },
   {
     step: 5,
@@ -59,6 +64,7 @@ const solatSteps = [
     meaning: 'Glory be to my Lord, the Most High',
     description: 'Prostrate with forehead, nose, both palms, both knees, and toes touching the ground. Say the tasbih at least three times.',
     posture: <img src="/images/5.png"/>,
+    audio: "/audio/Audio1.mp3"
   },
   {
     step: 6,
@@ -69,6 +75,7 @@ const solatSteps = [
     meaning: 'My Lord, forgive me',
     description: 'Sit briefly between the two prostrations. Keep your hands on your thighs and recite the dua.',
     posture: <img src="/images/6.png"/>,
+    audio: "/audio/Audio1.mp3"
   },
   {
     step: 7,
@@ -78,7 +85,8 @@ const solatSteps = [
     transliteration: 'Ash-hadu an la ilaha illallah',
     meaning: 'I bear witness that there is no deity except Allah',
     description: 'Sit in the final sitting position. Raise your index finger when mentioning Allah and recite the full Tashahhud.',
-    posture: <img src="/images/7.png"/> // try to add image 8 too?
+    posture: <img src="/images/7.png"/>, // try to add image 8 too?
+    audio: "/audio/Audio1.mp3"
   },
   {
     step: 8,
@@ -89,25 +97,54 @@ const solatSteps = [
     meaning: 'Peace and mercy of Allah be upon you',
     description: 'Turn your head to the right and say the salam, then turn to the left and repeat. This completes your prayer.',
     posture: <img src="/images/9.png"/>, 
+    audio: "/audio/Audio1.mp3"
   },
 ];
+
+const rakaahCount: Record<PrayerType, number> = {
+  Fajr: 2,
+  Zuhr: 4,
+  Asr: 4,
+  Maghrib: 3,
+  Isha: 4,
+};
+
+const generateStepsForPrayer = (prayer: PrayerType) => {
+  const totalRakaah = rakaahCount[prayer];
+  const steps: typeof solatSteps = [] as any;
+
+  for (let r = 1; r <= totalRakaah; r++) {
+    solatSteps.forEach((step) => {
+      steps.push({
+        ...step,
+        title: `${step.title} (Rakaah ${r})`,
+        step: steps.length + 1,
+      });
+    });
+  }
+
+  return steps;
+};
 
 export function SolatGuide({ onBack }: SolatGuideProps) {
   const [currentStep, setCurrentStep] = useState(0);
   const [completedSteps, setCompletedSteps] = useState<number[]>([]);
+  const [activePrayer, setActivePrayer] = useState<PrayerType>('Fajr');
 
-  const step = solatSteps[currentStep];
-  const isLastStep = currentStep === solatSteps.length - 1;
+  const stepsForPrayer = generateStepsForPrayer(activePrayer);
+  const step = stepsForPrayer[currentStep];
+
+  const isLastStep = currentStep === stepsForPrayer.length - 1;
   const isStepCompleted = completedSteps.includes(currentStep);
 
   const handleNext = () => {
     if (!isStepCompleted) {
-      setCompletedSteps([...completedSteps, currentStep]);
+      setCompletedSteps((prev) => [...prev, currentStep]);
     }
-    if (currentStep < solatSteps.length - 1) {
-      setCurrentStep(currentStep + 1);
+
+    if (!isLastStep) {
+      setCurrentStep((prev) => prev + 1);
     } else {
-      // On last step, return to dashboard
       onBack();
     }
   };
@@ -125,12 +162,17 @@ export function SolatGuide({ onBack }: SolatGuideProps) {
   };
 
   const audioRef = useRef<HTMLAudioElement>(null);
-
   const handleAudio = () => {
     if (audioRef.current) {
       audioRef.current.currentTime = 0; // restart if clicked again
       audioRef.current.play();
     }
+  };
+
+  const handlePrayerChange = (prayer: PrayerType) => {
+    setActivePrayer(prayer);
+    setCurrentStep(0);
+    setCompletedSteps([]);
   };
 
   return (
@@ -162,6 +204,24 @@ export function SolatGuide({ onBack }: SolatGuideProps) {
         </div>
       </div>
 
+      {/* Prayer Tabs */}
+      <div className="px-6 py-6 flex gap-3 flex-wrap">
+        {prayerTypes.map((prayer) => (
+          <Button
+            key={prayer}
+            onClick={() => handlePrayerChange(prayer)}
+            variant={activePrayer === prayer ? 'default' : 'outline'}
+            className={`rounded-3xl px-5 ${
+              activePrayer === prayer
+                ? 'bg-primary text-white'
+                : 'border-muted-foreground/30'
+            }`}
+          >
+            {prayer}
+          </Button>
+        ))}
+      </div>
+
       {/* Content */}
       <div className="flex-1 overflow-y-auto pb-32">
         {/* Posture Illustration */}
@@ -187,7 +247,7 @@ export function SolatGuide({ onBack }: SolatGuideProps) {
           <div className="bg-secondary/20 rounded-3xl p-6 space-y-5">
             <div className="text-center">
               <p className="text-muted-foreground text-[13px] mb-3">Arabic</p>
-              <p className="text-[26px] text-foreground leading-relaxed" dir="rtl">
+              <p className="text-[16px] text-foreground leading-relaxed" dir="rtl">
                 {step.arabic}
               </p>
             </div>

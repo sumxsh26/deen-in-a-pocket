@@ -14,126 +14,55 @@ const wudhuSteps = [
     transliteration: 'Bismillah',
     meaning: 'In the name of Allah',
     description: 'Begin by making a sincere intention in your heart to perform wudhu for prayer.',
-    illustration: (
-      <svg className="w-full h-48" viewBox="0 0 300 200" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <ellipse cx="150" cy="100" rx="60" ry="80" fill="#6B8E7F" opacity="0.2"/>
-        <path d="M120 70 Q150 60 180 70" stroke="#6B8E7F" strokeWidth="3" strokeLinecap="round"/>
-        <circle cx="130" cy="85" r="4" fill="#6B8E7F"/>
-        <circle cx="170" cy="85" r="4" fill="#6B8E7F"/>
-        <path d="M110 110 L110 130 Q110 140 120 145 L180 145 Q190 140 190 130 L190 110" 
-              stroke="#C9B8A3" strokeWidth="3" fill="none" strokeLinecap="round"/>
-      </svg>
-    ),
+    illustration: <img src="/images/1.png"/>,
   },
   {
     step: 2,
     title: 'Wash Hands Three Times',
     description: 'Wash both hands up to the wrists three times, making sure water reaches between fingers.',
-    illustration: (
-      <svg className="w-full h-48" viewBox="0 0 300 200" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <path d="M150 80 L150 120 Q150 130 140 130 L120 130 Q110 130 110 140 L110 160" 
-              stroke="#6B8E7F" strokeWidth="4" fill="none" strokeLinecap="round"/>
-        <circle cx="110" cy="165" r="3" fill="#6B8E7F"/>
-        <path d="M130 165 Q140 160 145 165" stroke="#8BA89B" strokeWidth="2" opacity="0.6"/>
-        <path d="M125 175 Q135 170 140 175" stroke="#8BA89B" strokeWidth="2" opacity="0.6"/>
-        <ellipse cx="150" cy="70" rx="25" ry="15" fill="#8BA89B" opacity="0.3"/>
-      </svg>
-    ),
+    illustration: <img src="/images/1.png"/>,
   },
   {
     step: 3,
     title: 'Rinse Mouth Three Times',
     description: 'Take water in your right hand and rinse your mouth thoroughly three times.',
-    illustration: (
-      <svg className="w-full h-48" viewBox="0 0 300 200" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <circle cx="150" cy="90" r="45" fill="#E8D9C5" opacity="0.4"/>
-        <path d="M130 85 Q150 95 170 85" stroke="#6B8E7F" strokeWidth="3" fill="none" strokeLinecap="round"/>
-        <circle cx="135" cy="75" r="4" fill="#6B8E7F"/>
-        <circle cx="165" cy="75" r="4" fill="#6B8E7F"/>
-        <ellipse cx="150" cy="100" rx="12" ry="8" fill="#8BA89B" opacity="0.5"/>
-      </svg>
-    ),
+    illustration: <img src="/images/1.png"/>,
   },
   {
     step: 4,
     title: 'Rinse Nose Three Times',
     description: 'Sniff water into your nostrils three times and blow it out gently.',
-    illustration: (
-      <svg className="w-full h-48" viewBox="0 0 300 200" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <circle cx="150" cy="90" r="45" fill="#E8D9C5" opacity="0.4"/>
-        <circle cx="135" cy="75" r="4" fill="#6B8E7F"/>
-        <circle cx="165" cy="75" r="4" fill="#6B8E7F"/>
-        <ellipse cx="145" cy="95" rx="3" ry="6" fill="#6B8E7F" opacity="0.6"/>
-        <ellipse cx="155" cy="95" rx="3" ry="6" fill="#6B8E7F" opacity="0.6"/>
-        <path d="M140 105 Q145 108 150 105 Q155 108 160 105" stroke="#C9B8A3" strokeWidth="2" fill="none"/>
-      </svg>
-    ),
+    illustration: <img src="/images/1.png"/>,
   },
   {
     step: 5,
     title: 'Wash Face Three Times',
     description: 'Wash your entire face from forehead to chin and from ear to ear, three times.',
-    illustration: (
-      <svg className="w-full h-48" viewBox="0 0 300 200" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <ellipse cx="150" cy="90" rx="50" ry="60" fill="#6B8E7F" opacity="0.2"/>
-        <circle cx="135" cy="80" r="5" fill="#6B8E7F" opacity="0.6"/>
-        <circle cx="165" cy="80" r="5" fill="#6B8E7F" opacity="0.6"/>
-        <path d="M140 110 Q150 115 160 110" stroke="#C9B8A3" strokeWidth="3" fill="none" strokeLinecap="round"/>
-        <path d="M110 60 Q150 50 190 60" stroke="#6B8E7F" strokeWidth="2" opacity="0.4"/>
-      </svg>
-    ),
+    illustration: <img src="/images/1.png"/>,
   },
   {
     step: 6,
     title: 'Wash Arms Three Times',
     description: 'Wash your right arm from fingertips to elbow three times, then repeat with the left arm.',
-    illustration: (
-      <svg className="w-full h-48" viewBox="0 0 300 200" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <path d="M100 100 L180 100" stroke="#6B8E7F" strokeWidth="8" strokeLinecap="round" opacity="0.3"/>
-        <path d="M180 100 L200 80" stroke="#6B8E7F" strokeWidth="6" strokeLinecap="round" opacity="0.4"/>
-        <circle cx="205" cy="75" r="8" fill="#C9B8A3" opacity="0.5"/>
-        <ellipse cx="140" cy="100" rx="40" ry="15" fill="#8BA89B" opacity="0.2"/>
-      </svg>
-    ),
+    illustration: <img src="/images/1.png"/>,
   },
   {
     step: 7,
     title: 'Wipe Head Once',
     description: 'Wet your hands and wipe over your head from front to back, once.',
-    illustration: (
-      <svg className="w-full h-48" viewBox="0 0 300 200" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <ellipse cx="150" cy="80" rx="45" ry="35" fill="#6B8E7F" opacity="0.3"/>
-        <path d="M105 80 Q150 60 195 80" stroke="#C9B8A3" strokeWidth="3" fill="none" strokeLinecap="round"/>
-        <path d="M120 90 L180 90" stroke="#8BA89B" strokeWidth="2" opacity="0.5"/>
-        <circle cx="150" cy="120" r="30" fill="#E8D9C5" opacity="0.4"/>
-      </svg>
-    ),
+    illustration: <img src="/images/1.png"/>,
   },
   {
     step: 8,
     title: 'Wash Ears Three Times',
     description: 'Wash your ears three times.',
-    illustration: (
-      <svg className="w-full h-48" viewBox="0 0 300 200" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <ellipse cx="130" cy="130" rx="25" ry="35" fill="#6B8E7F" opacity="0.3"/>
-        <ellipse cx="130" cy="165" rx="30" ry="15" fill="#C9B8A3" opacity="0.4"/>
-        <path d="M105 165 L155 165" stroke="#6B8E7F" strokeWidth="3" strokeLinecap="round"/>
-        <ellipse cx="120" cy="100" rx="15" ry="20" fill="#8BA89B" opacity="0.2"/>
-      </svg>
-    ),
+    illustration: <img src="/images/1.png"/>,
   },
   {
     step: 9,
     title: 'Wash Feet Three Times',
     description: 'Wash your right foot up to the ankle three times, then the left foot three times.',
-    illustration: (
-      <svg className="w-full h-48" viewBox="0 0 300 200" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <ellipse cx="130" cy="130" rx="25" ry="35" fill="#6B8E7F" opacity="0.3"/>
-        <ellipse cx="130" cy="165" rx="30" ry="15" fill="#C9B8A3" opacity="0.4"/>
-        <path d="M105 165 L155 165" stroke="#6B8E7F" strokeWidth="3" strokeLinecap="round"/>
-        <ellipse cx="120" cy="100" rx="15" ry="20" fill="#8BA89B" opacity="0.2"/>
-      </svg>
-    ),
+    illustration: <img src="/images/1.png"/>,
   },
   {
     step: 10,
@@ -142,16 +71,7 @@ const wudhuSteps = [
     transliteration: 'Ash-hadu an la ilaha illallahu wahdahu la sharika lah, wa ash-hadu anna Muhammadan abduhu wa rasuluh',
     meaning: 'I bear witness that there is no deity worthy of worship except Allah alone, without partner, and I bear witness that Muhammad is His servant and messenger',
     description: 'After completing wudhu, recite the following testimony of faith.',
-    illustration: (
-      <svg className="w-full h-48" viewBox="0 0 300 200" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <circle cx="150" cy="100" r="60" fill="#6B8E7F" opacity="0.1"/>
-        <circle cx="150" cy="100" r="40" fill="#6B8E7F" opacity="0.15"/>
-        <circle cx="150" cy="100" r="20" fill="#6B8E7F" opacity="0.25"/>
-        <path d="M150 80 L150 60" stroke="#C9B8A3" strokeWidth="3" strokeLinecap="round"/>
-        <circle cx="150" cy="55" r="5" fill="#C9B8A3"/>
-        <path d="M120 110 Q150 130 180 110" stroke="#8BA89B" strokeWidth="2" opacity="0.6"/>
-      </svg>
-    ),
+    illustration: <img src="/images/1.png"/>,
   },
 ];
 
@@ -242,7 +162,7 @@ export function WudhuGuide({ onBack }: WudhuGuideProps) {
               <div className="bg-secondary/20 rounded-3xl p-6 space-y-4">
                 <div className="text-center">
                   <p className="text-muted-foreground text-[13px] mb-2">Arabic</p>
-                  <p className="text-[24px] text-foreground" dir="rtl">
+                  <p className="text-[16px] text-foreground" dir="rtl">
                     {step.arabic}
                   </p>
                 </div>
