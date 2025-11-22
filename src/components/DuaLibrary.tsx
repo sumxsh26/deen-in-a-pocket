@@ -114,9 +114,11 @@ export function DuaLibrary({ onBack }: DuaLibraryProps) {
           <h2 className="text-[18px] text-foreground mb-4 px-1">Simple Du’as for Daily Life</h2>
           
           {/* Content */}
-            <div className="flex-1 overflow-y-auto pb-32">
-                      {/* Item Details */}
+          <div className="flex-1 overflow-y-auto pb-32">
+          
+          {/* Item Details */}
         <div className="px-6 py-6 space-y-6">
+          
           {/* Item Title */}
           <div>
             <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary/10 text-primary text-[14px] mb-3">
@@ -125,7 +127,7 @@ export function DuaLibrary({ onBack }: DuaLibraryProps) {
             <h2 className="text-[26px] text-foreground mb-2">{item.title}</h2>
           </div>
 
-          {/* Arabic & Transliteration - Only for steps 1 and 10 */}
+          {/* Arabic & Transliteration */}
               <div className="bg-secondary/20 rounded-3xl p-6 space-y-4">
                 <div className="text-center">
                   <p className="text-muted-foreground text-[13px] mb-2">Arabic</p>
@@ -154,8 +156,8 @@ export function DuaLibrary({ onBack }: DuaLibraryProps) {
                 <Volume2 className="w-5 h-5 text-accent-foreground" />
                 <span className="text-accent-foreground text-[16px]">Listen to Pronunciation</span>
               </button>
-        </div>       
-      </div>
+          </div>       
+        </div>
 
       {/* Bottom Navigation */}
       <div className="fixed bottom-0 left-0 right-0 bg-white border-t border-border p-6 max-w-md mx-auto">
@@ -173,19 +175,13 @@ export function DuaLibrary({ onBack }: DuaLibraryProps) {
             onClick={handleNext}
             className="flex-1 h-14 rounded-3xl bg-primary hover:bg-primary/90"
           >
-            {isLastItem ? 'Finish' : 'Next Step'}
+            {isLastItem ? 'Finish' : 'Next Duaa'}
             {!isLastItem && <ChevronRight className="w-5 h-5 ml-2" />}
           </Button>
         </div>
-      </div>
-
-
-          
-        </div>
-
-        {/* Bottom spacing */}
-        <div className="h-8" />
+      </div> 
       </div>
       </div>
+    </div>
   );
 }
