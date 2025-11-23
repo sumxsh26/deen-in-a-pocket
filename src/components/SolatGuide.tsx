@@ -211,7 +211,7 @@ export function SolatGuide({ onBack }: SolatGuideProps) {
             key={prayer}
             onClick={() => handlePrayerChange(prayer)}
             variant={activePrayer === prayer ? 'default' : 'outline'}
-            className={`rounded-3xl px-5 ${
+            className={`rounded-3xl px-5, w-fit ${
               activePrayer === prayer
                 ? 'bg-primary text-white'
                 : 'border-muted-foreground/30'
