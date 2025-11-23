@@ -20,7 +20,7 @@ const solatSteps = [
     meaning: 'Allah is the Greatest',
     description: 'Stand facing the Qiblah. Raise both hands to shoulder or ear level with palms facing forward, and say the takbir.',
     posture: <img src="/images/1.png"/>,
-    audio: "/audio/Audio1.mp3"
+    audio: "/audio/Takbeer.mp3"
   },
   {
     step: 2,
@@ -42,7 +42,7 @@ const solatSteps = [
     meaning: 'Glory be to my Lord, the Most Great',
     description: 'Bow down with your back straight and parallel to the ground. Place hands on knees. Say the tasbih at least three times.',
     posture: <img src="/images/4.png"/>,
-    audio: "/audio/Audio1.mp3"
+    audio: "/audio/Ruku.mp3"
   },
   {
     step: 4,
@@ -53,7 +53,7 @@ const solatSteps = [
     meaning: 'Allah hears those who praise Him',
     description: 'Rise back to standing position with hands at sides. Recite the tasbih with focus and gratitude.',
     posture: <img src="/images/3.png"/>,
-    audio: "/audio/Audio1.mp3"
+    audio: "/audio/I'tidal.mp3"
   },
   {
     step: 5,
@@ -64,7 +64,7 @@ const solatSteps = [
     meaning: 'Glory be to my Lord, the Most High',
     description: 'Prostrate with forehead, nose, both palms, both knees, and toes touching the ground. Say the tasbih at least three times.',
     posture: <img src="/images/5.png"/>,
-    audio: "/audio/Audio1.mp3"
+    audio: "/audio/Sujud.mp3"
   },
   {
     step: 6,
@@ -75,7 +75,7 @@ const solatSteps = [
     meaning: 'My Lord, forgive me',
     description: 'Sit briefly between the two prostrations. Keep your hands on your thighs and recite the dua.',
     posture: <img src="/images/6.png"/>,
-    audio: "/audio/Audio1.mp3"
+    audio: "/audio/Julus.mp3"
   },
   {
     step: 7,
@@ -86,7 +86,7 @@ const solatSteps = [
     meaning: 'I bear witness that there is no deity except Allah',
     description: 'Sit in the final sitting position. Raise your index finger when mentioning Allah and recite the full Tashahhud.',
     posture: <img src="/images/7.png"/>, // try to add image 8 too?
-    audio: "/audio/Audio1.mp3"
+    audio: "/audio/tahiyyat.mp3"
   },
   {
     step: 8,
@@ -97,7 +97,7 @@ const solatSteps = [
     meaning: 'Peace and mercy of Allah be upon you',
     description: 'Turn your head to the right and say the salam, then turn to the left and repeat. This completes your prayer.',
     posture: <img src="/images/9.png"/>, 
-    audio: "/audio/Audio1.mp3"
+    audio: "/audio/Salam.mp3"
   },
 ];
 

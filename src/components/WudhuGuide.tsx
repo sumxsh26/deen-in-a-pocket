@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import { ChevronLeft, ChevronRight, Volume2, Check } from 'lucide-react';
 import { Button } from './ui/button';
+import { useRef } from "react";
 
 interface WudhuGuideProps {
   onBack: () => void;
@@ -15,6 +16,7 @@ const wudhuSteps = [
     meaning: 'In the name of Allah',
     description: 'Begin by making a sincere intention in your heart to perform wudhu for prayer.',
     illustration: <img src="/images/1.png"/>,
+    audio: "/audio/Bismillah.mp3"
   },
   {
     step: 2,
@@ -72,6 +74,7 @@ const wudhuSteps = [
     meaning: 'I bear witness that there is no deity worthy of worship except Allah alone, without partner, and I bear witness that Muhammad is His servant and messenger',
     description: 'After completing wudhu, recite the following testimony of faith.',
     illustration: <img src="/images/1.png"/>,
+    audio: "/audio/DuaAfterWudhu.mp3"
   },
 ];
 
@@ -106,6 +109,14 @@ export function WudhuGuide({ onBack }: WudhuGuideProps) {
       setCompletedSteps([...completedSteps, currentStep]);
     }
   };
+
+  const audioRef = useRef<HTMLAudioElement>(null);
+    const handleAudio = () => {
+      if (audioRef.current) {
+        audioRef.current.currentTime = 0; // restart if clicked again
+        audioRef.current.play();
+      }
+    };
 
   return (
     <div className="min-h-screen bg-white flex flex-col">
@@ -183,10 +194,13 @@ export function WudhuGuide({ onBack }: WudhuGuideProps) {
               </div>
 
               {/* Audio Button */}
-              <button className="w-full h-14 rounded-3xl bg-accent/20 border border-accent/30 flex items-center justify-center gap-3 hover:bg-accent/30 transition-colors">
-                <Volume2 className="w-5 h-5 text-accent-foreground" />
-                <span className="text-accent-foreground text-[16px]">Listen to Pronunciation</span>
-              </button>
+          <audio ref={audioRef} src={step.audio} />
+          <button 
+          onClick={handleAudio}
+          className="w-full h-14 rounded-3xl bg-accent/20 border border-accent/30 flex items-center justify-center gap-3 hover:bg-accent/30 transition-colors">
+            <Volume2 className="w-5 h-5 text-accent-foreground" />
+            <span className="text-accent-foreground text-[16px]">Listen to Recitation</span>
+          </button>
             </>
           )}
 
