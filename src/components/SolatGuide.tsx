@@ -70,9 +70,9 @@ const solatSteps = [
     step: 6,
     title: 'Sitting Between Sujud',
     subtitle: 'Brief Sitting Position',
-    arabic: 'رَبِّ اغْفِرْ لِي',
-    transliteration: 'Rabbighfirli',
-    meaning: 'My Lord, forgive me',
+    arabic: 'رَبِّ اغْفِرْ لِي، وَارْحَمْنِي، وَاجْبُرْنِي، وَارْفَعْنِي، وَارْزُقْنِي، وَاهْدِنِي، وَعَافِنِي، وَاعْفُ عَنِّي',
+    transliteration: 'Rabbighfirli warhamnee, wajburnee, warfanee, warzuqnee, wahdinee, wa aafinee, wafu annee',
+    meaning: 'My Lord, forgive me, have mercy on me, repair me, elevate me, provide for me, guide me, protect me ', 
     description: 'Sit briefly between the two prostrations. Keep your hands on your thighs and recite the dua.',
     posture: <img src="/images/6.png"/>,
     audio: "/audio/Julus.mp3"
