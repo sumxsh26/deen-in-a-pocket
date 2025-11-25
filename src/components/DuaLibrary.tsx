@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import { ChevronLeft, ChevronRight, Volume2, Check, Info } from 'lucide-react';
 import { Button } from './ui/button';
 import { useRef } from "react";
@@ -81,6 +81,18 @@ export function DuaLibrary({ onBack }: DuaLibraryProps) {
     }
   };
 
+  {/* Modal popup*/}
+const modalRef = useRef<HTMLDialogElement>(null);
+
+const closeModal = () => {
+  modalRef.current?.close();
+};
+
+// Auto open when page loads
+useEffect(() => {
+  modalRef.current?.showModal();
+}, []);
+
   return (
     <div className="min-h-screen bg-white">
       {/* Header */}
@@ -96,18 +108,23 @@ export function DuaLibrary({ onBack }: DuaLibraryProps) {
       </div>
       
       <div className="p-6 space-y-8">
-        {/* Reminder */}
-        <div className="bg-gradient-to-br from-primary/5 to-secondary/20 rounded-3xl p-6 border border-border">
-          <p className="text-foreground text-[15px] mb-2">Learn Duaa</p>
-          <p className="text-muted-foreground text-[14px] leading-relaxed">
-            This journey you’ve started is beautiful, and it comes with the assurance that Allah sees every effort you make, even the quiet ones. He is the Most Merciful, and He accepts every sincere whisper from the heart.
-            Take things slowly. You don’t need to memorise everything at once. Start with small steps, practise at your own pace, and allow yourself to grow gently. Every day, even a little bit, brings you closer to understanding, peace, and connection with Allah.
-            May this guide be a source of comfort and ease as you begin learning and building your relationship with your Creator. 🌙
-          </p>
-          <p className="text-muted-foreground text-[14px] leading-relaxed">
-            
-          </p>
-        </div>
+        {/* Reminder */} 
+      <dialog
+          ref={modalRef}
+          onClick={(e) => {
+            if (e.target === modalRef.current) closeModal();
+          }}
+          className="rounded-xl p-6 max-w-sm centre">
+            <p className="text-foreground text-[15px] mb-2">Learn Duaa</p>
+            <p className="text-muted-foreground text-[14px] leading-relaxed">
+              This journey you’ve started is beautiful, and Allah sees every effort you make, even the quiet ones.
+              Take things slowly, grow gently, and allow yourself to learn at your own pace.
+              May this guide bring you peace and closeness to Him 🌙
+            </p>
+            <button
+            onClick={closeModal}
+            className="mt-4 px-4 py-2 rounded-md bg-primary text-white">Close</button>
+            </dialog> 
 
         {/* Content Header */}
         <div>

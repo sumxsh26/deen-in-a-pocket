@@ -14,21 +14,18 @@ interface OnboardingScreenProps {
 
 const slides = [
   {
-    icon: MoonStar,
     title: "Learn Solat with Confidence",
     description:
       "A complete guide to help you learn prayer step by step, at your own pace",
     illustration: <img src="/images/10.png"/>,
   },
   {
-    icon: HandHeart,
     title: "Start Your Journey",
     description:
       "Begin with simple lessons on wudhu and prayer. Take it one step at a time",
     illustration: <img src="/images/11.png"/>,
   },
   {
-    icon: Book,
     title: "Learn at Your Own Pace",
     description:
       "Access audio guides, translations, and simple visuals whenever you need them",
@@ -54,7 +51,7 @@ export function OnboardingScreen({
   };
 
   const slide = slides[currentSlide];
-  const Icon = slide.icon;
+  //const Icon = slide.icon;
 
   return (
     <div className="min-h-screen flex flex-col bg-gradient-to-b from-[#F5F3EE] to-white p-6">
@@ -72,10 +69,6 @@ export function OnboardingScreen({
 
       {/* Content */}
       <div className="flex-1 flex flex-col items-center justify-center gap-8 max-w-sm mx-auto">
-        {/* Icon */}
-        <div className="w-16 h-16 rounded-3xl bg-primary/10 flex items-center justify-center">
-          <Icon className="w-8 h-8 text-primary" />
-        </div>
 
         {/* Illustration */}
         <div className="flex items-center justify-center">

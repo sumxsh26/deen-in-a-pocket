@@ -11,9 +11,9 @@ const wudhuSteps = [
   {
     step: 1,
     title: 'Make Intention (Niyyah)',
-    arabic: ' بِسمِ اللّه',
-    transliteration: 'Bismillah',
-    meaning: 'In the name of Allah',
+    arabic: ' بِسْمِ اللهِ الرَّحْمٰنِ الرَّحِيْمِ',
+    transliteration: 'Bismi-llāhi r-raḥmāni r-raḥīm',
+    meaning: 'In the name of Allah, the Most Gracious, the Most Merciful',
     description: 'Begin by making a sincere intention in your heart to perform wudhu for prayer.',
     audio: "/audio/Bismillah.mp3"
   },
@@ -68,9 +68,9 @@ const wudhuSteps = [
   {
     step: 10,
     title: 'Recite the Shahadah',
-    arabic: 'أَشْهَدُ أَنْ لَا إِلَٰهَ إِلَّا ٱللَّٰهُ وَحْدَهُ لَا شَرِيكَ لَهُ، وَأَشْهَدُ أَنَّ مُحَمَّدًا عَبْدُهُ وَرَسُولُهُ',
-    transliteration: 'Ash-hadu an la ilaha illallahu wahdahu la sharika lah, wa ash-hadu anna Muhammadan abduhu wa rasuluh',
-    meaning: 'I bear witness that there is no deity worthy of worship except Allah alone, without partner, and I bear witness that Muhammad is His servant and messenger',
+    arabic: ' أَشْهَدُ أَنْ لَا إِلَٰهَ إِلَّا ٱللَّٰهُ وَحْدَهُ لَا شَرِيكَ لَهُ، وَأَشْهَدُ أَنَّ مُحَمَّدًا عَبْدُهُ وَرَسُولُهُ اللَّهُمَّ اجْعَلْنِي مِنَ التَّوَّابِينَ وَاجْعَلْنِي مِنَ الْمُتَطَهِّرِينَ ',
+    transliteration: 'Ash-hadu an la ilaha illallahu wahdahu la sharika lah, wa ash-hadu anna Muhammadan abduhu wa rasuluh, Allahumma-jalni minat-tawwabina waj alni minal-mutatahhirin',
+    meaning: 'I bear witness that there is no deity worthy of worship except Allah alone, without partner, and I bear witness that Muhammad is His servant and messenger. O Allah, make me among those who turn to You in repentance, and make me among those who are purified',
     description: 'After completing wudhu, recite the following testimony of faith.',
     audio: "/audio/DuaAfterWudhu.mp3"
   },
