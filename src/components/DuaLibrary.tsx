@@ -114,9 +114,8 @@ useEffect(() => {
           onClick={(e) => {
             if (e.target === modalRef.current) closeModal();
           }}
-          className="fixed inset-0 flex items-center justify-center bg-black/40">
-              <div className="rounded-xl p-6 max-w-sm bg-background">
-
+          className="rounded-xl p-6 max-w-sm">
+            <div>
             <p className="text-foreground text-[15px] mb-2">Learn Duaa</p>
             <p className="text-muted-foreground text-[14px] leading-relaxed">
               This journey you’ve started is beautiful, and Allah sees every effort you make, even the quiet ones.
