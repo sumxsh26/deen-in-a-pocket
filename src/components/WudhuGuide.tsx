@@ -15,56 +15,55 @@ const wudhuSteps = [
     transliteration: 'Bismillah',
     meaning: 'In the name of Allah',
     description: 'Begin by making a sincere intention in your heart to perform wudhu for prayer.',
-    illustration: <img src="/images/1.png"/>,
     audio: "/audio/Bismillah.mp3"
   },
   {
     step: 2,
     title: 'Wash Hands Three Times',
     description: 'Wash both hands up to the wrists three times, making sure water reaches between fingers.',
-    illustration: <img src="/images/1.png"/>,
+    illustration: <img src="/images/13.png"/>,
   },
   {
     step: 3,
     title: 'Rinse Mouth Three Times',
     description: 'Take water in your right hand and rinse your mouth thoroughly three times.',
-    illustration: <img src="/images/1.png"/>,
+    illustration: <img src="/images/14.png"/>,
   },
   {
     step: 4,
     title: 'Rinse Nose Three Times',
     description: 'Sniff water into your nostrils three times and blow it out gently.',
-    illustration: <img src="/images/1.png"/>,
+    illustration: <img src="/images/15.png"/>,
   },
   {
     step: 5,
     title: 'Wash Face Three Times',
     description: 'Wash your entire face from forehead to chin and from ear to ear, three times.',
-    illustration: <img src="/images/1.png"/>,
+    illustration: <img src="/images/16.png"/>,
   },
   {
     step: 6,
     title: 'Wash Arms Three Times',
     description: 'Wash your right arm from fingertips to elbow three times, then repeat with the left arm.',
-    illustration: <img src="/images/1.png"/>,
+    illustration: <div><img src="/images/17.png"/> <img src="/images/18.png"/></div>,
   },
   {
     step: 7,
     title: 'Wipe Head Once',
     description: 'Wet your hands and wipe over your head from front to back, once.',
-    illustration: <img src="/images/1.png"/>,
+    illustration: <div><img src="/images/19.png"/> <img src="/images/20.png"/></div>,
   },
   {
     step: 8,
     title: 'Wash Ears Three Times',
     description: 'Wash your ears three times.',
-    illustration: <img src="/images/1.png"/>,
+    illustration: <img src="/images/21.png"/>,
   },
   {
     step: 9,
     title: 'Wash Feet Three Times',
     description: 'Wash your right foot up to the ankle three times, then the left foot three times.',
-    illustration: <img src="/images/1.png"/>,
+    illustration: <img src="/images/22.png"/>,
   },
   {
     step: 10,
@@ -73,7 +72,6 @@ const wudhuSteps = [
     transliteration: 'Ash-hadu an la ilaha illallahu wahdahu la sharika lah, wa ash-hadu anna Muhammadan abduhu wa rasuluh',
     meaning: 'I bear witness that there is no deity worthy of worship except Allah alone, without partner, and I bear witness that Muhammad is His servant and messenger',
     description: 'After completing wudhu, recite the following testimony of faith.',
-    illustration: <img src="/images/1.png"/>,
     audio: "/audio/DuaAfterWudhu.mp3"
   },
 ];

@@ -18,134 +18,21 @@ const slides = [
     title: "Learn Solat with Confidence",
     description:
       "A complete guide to help you learn prayer step by step, at your own pace",
-    illustration: (
-      <svg
-        width="100"
-        height="100"
-        viewBox="0 0 100 100"
-        fill="none"
-        xmlns="http://www.w3.org/2000/svg"
-      ></svg>
-    ),
+    illustration: <img src="/images/10.png"/>,
   },
   {
     icon: HandHeart,
     title: "Start Your Journey",
     description:
       "Begin with simple lessons on wudhu and prayer. Take it one step at a time",
-    illustration: (
-      <svg
-        className="w-48 h-48"
-        viewBox="0 0 200 200"
-        fill="none"
-        xmlns="http://www.w3.org/2000/svg"
-      >
-        <path
-          d="M100 60 Q80 80 80 100 L80 130 Q80 140 90 140 L110 140 Q120 140 120 130 L120 100 Q120 80 100 60Z"
-          fill="#6B8E7F"
-          opacity="0.4"
-        />
-        <circle
-          cx="70"
-          cy="100"
-          r="8"
-          fill="#C9B8A3"
-          opacity="0.6"
-        />
-        <circle
-          cx="130"
-          cy="100"
-          r="8"
-          fill="#C9B8A3"
-          opacity="0.6"
-        />
-        <path
-          d="M90 120 Q100 125 110 120"
-          stroke="#6B8E7F"
-          strokeWidth="2"
-          fill="none"
-          strokeLinecap="round"
-        />
-      </svg>
-    ),
+    illustration: <img src="/images/11.png"/>,
   },
   {
     icon: Book,
     title: "Learn at Your Own Pace",
     description:
       "Access audio guides, translations, and simple visuals whenever you need them",
-    illustration: (
-      <svg
-        className="w-48 h-48"
-        viewBox="0 0 200 200"
-        fill="none"
-        xmlns="http://www.w3.org/2000/svg"
-      >
-        <rect
-          x="50"
-          y="60"
-          width="100"
-          height="80"
-          rx="8"
-          fill="#E8D9C5"
-          opacity="0.5"
-        />
-        <rect
-          x="55"
-          y="65"
-          width="40"
-          height="70"
-          rx="4"
-          fill="#6B8E7F"
-          opacity="0.3"
-        />
-        <rect
-          x="105"
-          y="65"
-          width="40"
-          height="70"
-          rx="4"
-          fill="#C9B8A3"
-          opacity="0.4"
-        />
-        <line
-          x1="60"
-          y1="75"
-          x2="85"
-          y2="75"
-          stroke="#6B8E7F"
-          strokeWidth="2"
-          opacity="0.6"
-        />
-        <line
-          x1="60"
-          y1="85"
-          x2="85"
-          y2="85"
-          stroke="#6B8E7F"
-          strokeWidth="2"
-          opacity="0.6"
-        />
-        <line
-          x1="110"
-          y1="75"
-          x2="135"
-          y2="75"
-          stroke="#C9B8A3"
-          strokeWidth="2"
-          opacity="0.6"
-        />
-        <line
-          x1="110"
-          y1="85"
-          x2="135"
-          y2="85"
-          stroke="#C9B8A3"
-          strokeWidth="2"
-          opacity="0.6"
-        />
-      </svg>
-    ),
+    illustration: <img src="/images/12.png"/>,
   },
 ];
 
