@@ -109,12 +109,14 @@ useEffect(() => {
       
       <div className="p-6 space-y-8">
         {/* Reminder */} 
-      <dialog
+        <dialog
           ref={modalRef}
           onClick={(e) => {
             if (e.target === modalRef.current) closeModal();
           }}
-          className="rounded-xl p-6 max-w-sm centre">
+          className="fixed inset-0 flex items-center justify-center bg-black/40">
+              <div className="rounded-xl p-6 max-w-sm bg-background">
+
             <p className="text-foreground text-[15px] mb-2">Learn Duaa</p>
             <p className="text-muted-foreground text-[14px] leading-relaxed">
               This journey you’ve started is beautiful, and Allah sees every effort you make, even the quiet ones.
@@ -123,8 +125,10 @@ useEffect(() => {
             </p>
             <button
             onClick={closeModal}
-            className="mt-4 px-4 py-2 rounded-md bg-primary text-white">Close</button>
-            </dialog> 
+            className="mt-4 px-4 py-2 rounded-md bg-primary text-white">Close
+            </button>
+            </div>
+        </dialog> 
 
         {/* Content Header */}
         <div>
