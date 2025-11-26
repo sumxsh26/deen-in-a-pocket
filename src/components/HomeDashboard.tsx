@@ -8,6 +8,7 @@ import {
   MoonStar,
 } from "lucide-react";
 import type { Screen } from "../App";
+import { useEffect, useRef } from "react";
 
 interface HomeDashboardProps {
   onNavigate: (screen: Screen) => void;
@@ -42,8 +43,51 @@ export function HomeDashboard({
   const nextPrayer = 'Asr';
   const nextPrayerTime = prayerTimes[nextPrayer as keyof typeof prayerTimes];
 
+    {/* Modal popup*/}
+  const modalRef = useRef<HTMLDialogElement>(null);
+
+useEffect(() => {
+  const hasSeenModal = sessionStorage.getItem("seenReminderModal");
+
+  if (!hasSeenModal && modalRef.current) {
+    modalRef.current.showModal();
+    sessionStorage.setItem("seenReminderModal", "true");
+  }
+}, []);
+
+const closeModal = () => {
+  modalRef.current?.close();
+};
+  
+
   return (
     <div className="min-h-screen bg-gradient-to-b from-[#F5F3EE] to-white">
+
+      {/* Reminder */} 
+      <dialog
+  ref={modalRef}
+  onClick={(e) => {
+    if (e.target === modalRef.current) closeModal();
+  }}
+  className="rounded-xl p-6 max-w-sm mh-auto mx-auto backdrop:bg-black/40"
+>
+  <div className="flex flex-col gap-4 text-center">
+    <p className="text-muted-foreground text-[14px] leading-relaxed">
+      This journey you’ve started is beautiful, and Allah sees every effort you make, even the quiet ones.
+      Take things slowly, grow gently, and allow yourself to learn at your own pace.
+      May this guide bring you peace and closeness to Him 🌙
+    </p>
+
+    <button
+      onClick={closeModal}
+      className="px-4 py-2 rounded-md bg-primary text-white self-center"
+    >
+      Close
+    </button>
+  </div>
+</dialog>
+
+
       {/* Header */}
       <div className="bg-white px-6 py-6 border-b border-border">
         <div className="flex items-center justify-between mb-2">
@@ -52,7 +96,7 @@ export function HomeDashboard({
               Assalamu'alaikum
             </p>
             <h1 className="text-[24px] text-foreground">
-              Welcome Back, Sumayyah
+              Welcome Back
             </h1>
           </div>
           <button

@@ -15,7 +15,6 @@ const duaaItems = [
     arabic: 'بِسْمِ اللّٰهِ، تَوَكَّلْتُ عَلَى اللّٰهِ، وَلَا حَوْلَ وَلَا قُوَّةَ إِلَّا بِاللّٰهِ',
     transliteration: ' Bismillaahi, tawakkaltu ‘alallaahi, wa laa hawla wa laa quwwata illaa billaah',
     meaning: 'In the Name of Allah, I have placed my trust in Allah; there is no might and no power except by Allah.',
-    icon: <img src="/images/1.png"/>, 
   },
   {
     number: 2,
@@ -23,7 +22,6 @@ const duaaItems = [
     arabic: 'سُبْحَانَ الذي سَخَّرَ لَنَا هذا، وَما كُنَّا له مُقْرِنِينَ، وإنَّا إلى رَبِّنَا لَمُنْقَلِبُونَ',
     transliteration: 'Subhanal-ladzi sakh-khara lana hadza wa ma kunna lahu muqrinin. Wa inna ila Rabbina lamun-qalibun.',
     meaning: 'In the name of Allah and all praise is for Allah. How perfect He is, the One Who has placed this (transport) at our service and we ourselves would not have been capable of that, and to our Lord is our final destiny.',
-    icon: <img src="/images/1.png"/>, 
   },
   {
     number: 3,
@@ -31,15 +29,13 @@ const duaaItems = [
     arabic: 'بِسْمِ اللَّهِ الَّذِي لَا يَضُرُّ مَعَ اسْمِهِ شَيْءٌ فِي الْأَرْضِ وَلَا فِي السَّمَاءِ وَهُوَ السَّمِيعُ الْعَلِيمُ',
     transliteration: 'Bismillahil-lazi la yadhurru ma’asmiHi syai’un fil ardhi wa la fis-sama’i wa Huwas-Sami’ul Aleem',
     meaning: 'In the Name of Allah with Whose Name there is protection against every kind of harm in the earth or in heaven, and He is All-Hearing and All-Knowing',
-    icon: <img src="/images/1.png"/>, 
   },
   {
     number: 4,
-    title: 'When seeking protection',
+    title: 'Dua for steadfastness and uprightness in the religion',
     arabic: 'يَا مُقَلِّبَ الْقُلُوبِ ثَبِّتْ قَلْبِي عَلَى دِينِك',
     transliteration: 'yaa mu-qallibal quloob thab-bit qalbee ‘alaa deenik',
     meaning: 'Oh turner of hearts, keep my heart firm upon Your religion.',
-    icon: <img src="/images/1.png"/>, 
   },
 
 
@@ -81,18 +77,6 @@ export function DuaLibrary({ onBack }: DuaLibraryProps) {
     }
   };
 
-  {/* Modal popup*/}
-const modalRef = useRef<HTMLDialogElement>(null);
-
-const closeModal = () => {
-  modalRef.current?.close();
-};
-
-// Auto open when page loads
-useEffect(() => {
-  modalRef.current?.showModal();
-}, []);
-
   return (
     <div className="min-h-screen bg-white">
       {/* Header */}
@@ -103,36 +87,16 @@ useEffect(() => {
         >
           <ChevronLeft className="w-5 h-5 text-foreground" />
         </button>
-        <h1 className="text-[20px] text-foreground">Dua Library</h1>
+        <div className="text-center">
+          <h1 className="text-[20px] text-foreground">Dua Library</h1>
+          <p className="text-foreground text-[15px]">Simple Du’as for Daily Life</p>
+        </div>
         <div className="w-10" /> {/* Spacer */}
       </div>
       
       <div className="p-6 space-y-8">
-        {/* Reminder */} 
-        <dialog
-          ref={modalRef}
-          onClick={(e) => {
-            if (e.target === modalRef.current) closeModal();
-          }}
-          className="rounded-xl p-6 max-w-sm">
-            <div>
-            <p className="text-foreground text-[15px] mb-2">Learn Duaa</p>
-            <p className="text-muted-foreground text-[14px] leading-relaxed">
-              This journey you’ve started is beautiful, and Allah sees every effort you make, even the quiet ones.
-              Take things slowly, grow gently, and allow yourself to learn at your own pace.
-              May this guide bring you peace and closeness to Him 🌙
-            </p>
-            <button
-            onClick={closeModal}
-            className="mt-4 px-4 py-2 rounded-md bg-primary text-white">Close
-            </button>
-            </div>
-        </dialog> 
-
         {/* Content Header */}
-        <div>
-          <h2 className="text-[18px] text-foreground mb-4 px-1">Simple Du’as for Daily Life</h2>
-          
+        <div>          
           {/* Content */}
           <div className="flex-1 overflow-y-auto pb-32">
           
